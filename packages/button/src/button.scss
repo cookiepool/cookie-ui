@@ -1,4 +1,6 @@
-.c-button {
+@import '../../style/common/reset.scss';
+@import '../../style/common/variable.scss';
+.cookie-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +10,7 @@
   outline: 0;
   border: 0;
   color: #fff;
-  &.c-button--primary {
+  &.cookie-button--primary {
     background-color: $button-primary;
   }
 }

@@ -3,9 +3,9 @@ import App from './App.vue';
 import router from './router/router.js';
 
 // 引入组件
-import { Button } from '../packages/index';
-import '../packages/cookie_css/index.scss';
-Vue.use(Button);
+import CookieUI from '../packages/index';
+import '../packages/style/index.scss';
+Vue.use(CookieUI.Button);
  
 new Vue({
   router,

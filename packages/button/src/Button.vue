@@ -1,5 +1,5 @@
 <template>
-  <button class="c-button c-button--primary">基本按钮</button>  
+  <button class="cookie-button cookie-button--primary">基本按钮</button>  
 </template>
 
 
@@ -9,6 +9,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 </style>
