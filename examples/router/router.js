@@ -9,6 +9,8 @@ import App from '../App.vue';
 //下面的注释语法是打包生成的js的文件名，如果你想某几个组件打包到同一个文件，那么它们的注释语法的webpackChunkName的名字相同即可
 const Home = () =>
   import(/* webpackChunkName: "group-foo-1" */ "../views/Home.vue");
+const ButtonDemo = () =>
+  import(/* webpackChunkName: "group-foo-1" */ "../views/ButtonDemo.vue");
 
 const routes = [
   {
@@ -23,6 +25,11 @@ const routes = [
         path: '/',
         name: 'home',
         component: Home
+      },
+      {
+        path: '/button',
+        name: 'button',
+        component: ButtonDemo
       }
     ]
   }
