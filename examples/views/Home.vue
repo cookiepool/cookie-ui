@@ -1,17 +1,14 @@
 <template>
   <div class="all-wraper">
-    <HeadCommon :title="'首页'"/>
-
-    <img src="../assets/images/erer434345.gif" alt="动图">
-    <hr>
-    <div class="container">
-      <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias accusamus officiis officia dignissimos repudiandae, consequuntur debitis architecto sit rem odio ipsum quod ad sunt, dicta incidunt natus itaque similique? Veritatis.</p>
+    <div class="head-icon-wraper">
+      <img class="icon" src="../assets/images/bg_test.png" alt="图标">
     </div>
-    <hr>
-    <div class="bg-test"></div>
-    <hr>
-    <button @click="jumpToRouterTest">路由测试</button>
-    <button @click="jumpToVantTest">vant组件测试</button>
+    <div class="demo-wraper">
+      <ck-button type="primary" @click="jumpToButton">按钮演示</ck-button>
+    </div>
+    <div class="demo-wraper">
+      <ck-button type="primary" @click="jumpToToast">Toast演示</ck-button>
+    </div>
   </div>
 </template>
 
@@ -32,31 +29,27 @@ export default {
 
   },
   methods: {
-    jumpToRouterTest() {
-      this.$router.push('/routertest');
+    jumpToButton() {
+      this.$router.push('/button');
     },
-    jumpToVantTest() {
-      this.$router.push('/vanttest');
+    jumpToToast() {
+      this.$router.push('/toast');
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  .container {
-    width: 100%;
-    .text {
-      color: greenyellow;
+  .head-icon-wraper {
+    text-align: center;
+    padding: 24px 0;
+    .icon {
+      width: 164px;
     }
   }
-  .bg-test {
-    width: 288px;
-    height: 288px;
-    background-image: url('../assets/images/bg_test.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  .static-test {
-    width: 288px;
+  .demo-wraper {
+    padding: 16px 24px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f1f1f1;
   }
 </style>

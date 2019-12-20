@@ -2,10 +2,9 @@ import Vue from 'vue';
 import App from './App.vue';
 import router from './router/router.js';
 
-// 引入组件
+// 引入组件（注册所有）
 import CookieUI from '../packages/index';
-import '../packages/style/index.scss';
-Vue.use(CookieUI.Button);
+Vue.use(CookieUI);
  
 new Vue({
   router,
