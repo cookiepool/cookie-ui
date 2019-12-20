@@ -1,9 +1,11 @@
 /* 组件库对外导出的组件集合，对整个组件进行导出 */
 
 // 导入主样式文件（用于注册所有组件时使用）
-import './style/index.scss';
+// import './style/index.scss';
 // 导入组件（用于注册所有组件）
-import Button from './button';
+import Button from './components/button';
+
+import Toast from './components/toast';
 
 
 // 定义组件列表
@@ -19,6 +21,8 @@ const install = function(Vue) {
   componentsList.map((component) => {
     Vue.component(component.name, component);
   })
+
+  Vue.prototype.$toast = Toast;
 }
 
 if(typeof window !== 'undefined' && window.Vue) {
@@ -33,7 +37,8 @@ if(typeof window !== 'undefined' && window.Vue) {
 */
 export default {
   install,
-  Button
+  Button,
+  Toast
 }
 
 // 如果你还想实现按需加载各个组件，比如我想单独引用button组件，那么你还要加上下面这句

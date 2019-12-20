@@ -1,0 +1,27 @@
+@import '../../style/common/variable.scss';
+@import '../../style/mixins/flex_style.scss';
+@import '../../style/mixins/animation.scss';
+
+.cookie-toast-mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  @include flex-all-center;
+  .cookie-toast-dialog {
+    max-width: 80vw;
+    background-color: rgba(0, 0, 0, 1);
+    padding: 16px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    animation: zoomIn .3s ease-out 0s forwards;
+  }
+  .toast-content {
+    font-size: $font-size-s;
+    color: #fff;
+  }
+}
+
+@include anima-zoomIn
