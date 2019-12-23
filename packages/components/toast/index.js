@@ -25,7 +25,7 @@ let toast = function(options = {}) {
   let timer = setTimeout(() => {
     instance.show = false;
     clearTimeout(timer);
-  }, options.duration || 3000);
+  }, options.duration || 2000);
 }
 
 export default toast;
