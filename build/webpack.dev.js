@@ -46,7 +46,7 @@ module.exports = merge(webpackCommonConfig, {
     // 比如192.168.12.21:9000，手机在这个局网内也可以访问
     host: '0.0.0.0',
     hot: true,
-    port: 9200,
+    port: 9300,
     contentBase: './dist'
   }
 });
