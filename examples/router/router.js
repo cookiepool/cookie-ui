@@ -13,6 +13,8 @@ const ButtonDemo = () =>
   import(/* webpackChunkName: "group-foo-1" */ "../views/ButtonDemo.vue");
 const ToastDemo = () =>
   import(/* webpackChunkName: "group-foo-1" */ "../views/ToastDemo.vue");
+const DialogDemo = () =>
+  import(/* webpackChunkName: "group-foo-1" */ "../views/DialogDemo.vue");
 
 const routes = [
   {
@@ -37,6 +39,11 @@ const routes = [
         path: '/toast',
         name: 'toast',
         component: ToastDemo
+      },
+      {
+        path: '/dialog',
+        name: 'dialog',
+        component: DialogDemo
       }
     ]
   }

@@ -6,6 +6,7 @@
 import Button from './components/button';
 
 import Toast from './components/toast';
+import Dialog from './components/dialog';
 
 
 // 定义组件列表
@@ -23,6 +24,7 @@ const install = function(Vue) {
   })
 
   Vue.prototype.$toast = Toast;
+  Vue.prototype.$dialog = Dialog;
 }
 
 if(typeof window !== 'undefined' && window.Vue) {
@@ -38,7 +40,8 @@ if(typeof window !== 'undefined' && window.Vue) {
 export default {
   install,
   Button,
-  Toast
+  Toast,
+  Dialog
 }
 
 // 如果你还想实现按需加载各个组件，比如我想单独引用button组件，那么你还要加上下面这句
