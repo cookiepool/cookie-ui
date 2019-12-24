@@ -1,5 +1,5 @@
 <template>
-  <div class="all-wraper">
+  <div class="head-wraper">
     <div class="header-box">
       <img @click="goBack" class="back-button" src="../../assets/images/back_arrow.png" alt="图标">
       <p class="title-name">{{ titleName }}</p>
@@ -28,8 +28,8 @@ export default {
 </script>
 
 <style lang="scss">
-  .all-wraper {
-    height: 90px;
+  .head-wraper {
+    height: 45px;
     .header-box {
       position: fixed;
       left: 0;
@@ -38,24 +38,24 @@ export default {
       justify-content: space-between;
       align-items: center;
       width: 100%;
-      height: 90px;
+      height: 45px;
       z-index: 10;
       background-color: #FFDC45;
-      padding: 0 32px;
+      padding: 0 16px;
       box-sizing: border-box;
       .back-button {
-        width: 20px;
+        width: 10px;
       }
       .title-name {
-        font-size: 36px;
+        font-size: 18px;
         font-weight: 600;
         color: rgba(51,51,51,1);
-        line-height: 50px;
+        line-height: 25px;
       }
       .place-holder {
         flex: 0 0 auto;
-        width: 20px;
-        height: 100px;
+        width: 10px;
+        height: 50px;
       }
     }
   }
