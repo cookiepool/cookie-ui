@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     triggerToast() {
-      this.$toast({message: '这是吐司这是吐司这是吐司这是吐司这是吐司这是吐司这是吐司这是吐司这是吐司这是吐司这是吐司这是吐司这是吐司这是吐司', duration: 2000});
+      this.$toast({message: 'Hello,Toast演示', duration: 1500});
     }
   }
 }

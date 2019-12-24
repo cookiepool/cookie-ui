@@ -7,7 +7,7 @@ let instance;
 
 /**
  * 打开toast 
- * @param options {Object}  消息内容options.message，不可省略。停留时间options.duration，可省略，默认为3000（毫秒）
+ * @param options {Object}  消息内容options.message，不可省略。停留时间options.duration，可省略，默认为2000（毫秒）
 **/
 let toast = function(options = {}) {
   if(!instance) {

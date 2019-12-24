@@ -6,8 +6,8 @@ import Header from './components/header/HeadCommon.vue';
 Vue.component('app-header', Header);
 
 // 引入组件（注册所有）
-import CookieUI from '../lib/index.js';
-import '../lib/index.css';
+import CookieUI from '../packages/cookieui.js';
+// import '../lib/index.css';
 Vue.use(CookieUI);
  
 new Vue({
