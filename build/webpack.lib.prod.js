@@ -26,7 +26,17 @@ module.exports = {
     publicPath: "/",
     library: 'cookieui',
     libraryTarget: 'umd',
-    libraryExport: 'default'
+    libraryExport: 'default',
+    umdNamedDefine: true
+  },
+  // 我们打包组件库时不需要把Vue打包进去
+  externals: {
+    'vue': {
+      root: 'Vue',
+      commonjs: 'vue',
+      commonjs2: 'vue',
+      amd: 'vue',
+    }
   },
   module: {
     rules: [
@@ -35,11 +45,7 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'babel-loader',
-            options: {
-              // 使用vue官方的懒加载语法并结合babel需使用这个插件，不然会报错
-              plugins: ["@babel/plugin-syntax-dynamic-import"]
-            }
+            loader: 'babel-loader'
           }	
         ]
       },
