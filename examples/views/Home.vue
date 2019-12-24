@@ -9,6 +9,9 @@
     <div class="demo-wraper">
       <ck-button type="primary" @click="jumpToToast">Toast演示</ck-button>
     </div>
+    <div class="demo-wraper">
+      <ck-button type="primary" @click="jumpToDialog">Dialog演示</ck-button>
+    </div>
   </div>
 </template>
 
@@ -34,6 +37,9 @@ export default {
     },
     jumpToToast() {
       this.$router.push('/toast');
+    },
+    jumpToDialog() {
+      this.$router.push('/dialog');
     }
   }
 }

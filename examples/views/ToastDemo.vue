@@ -1,8 +1,12 @@
 <template>
-  <div class="demo-wraper">
-    <p class="title">Toast演示</p>
-    <div class="box"><ck-button type="primary" @click="triggerToast">打开Toast</ck-button></div>
+  <div class="all-wraper">
+    <app-header title="toast演示"></app-header>
+    <div class="demo-wraper">
+      <p class="title">Toast演示</p>
+      <div class="box"><ck-button type="primary" @click="triggerToast">打开Toast</ck-button></div>
+    </div>
   </div>
+
 </template>
 
 <script>

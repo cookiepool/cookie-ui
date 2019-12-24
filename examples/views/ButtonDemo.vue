@@ -1,10 +1,13 @@
 <template>
-  <div class="demo-wraper">
-    <p class="title">按钮类型</p>
-    <div class="box"><ck-button type="primary" @click="testClick">基本按钮</ck-button></div>
-    <div class="box"><ck-button type="danger">危险按钮</ck-button></div>
-    <div class="box"><ck-button type="warning">警告按钮</ck-button></div>
-    <div class="box"><ck-button type="info">信息按钮</ck-button></div>
+  <div class="all-wraper">
+    <app-header title="按钮演示"></app-header>
+    <div class="demo-wraper">
+      <p class="title">按钮类型</p>
+      <div class="box"><ck-button type="primary" @click="testClick">基本按钮</ck-button></div>
+      <div class="box"><ck-button type="danger">危险按钮</ck-button></div>
+      <div class="box"><ck-button type="warning">警告按钮</ck-button></div>
+      <div class="box"><ck-button type="info">信息按钮</ck-button></div>
+    </div>
   </div>
 </template>
 
@@ -18,7 +21,7 @@ export default {
   },
   methods: {
     testClick() {
-      con('点了按钮');
+      console.log('点了按钮');
     }
   }
 }
