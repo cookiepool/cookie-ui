@@ -46,7 +46,7 @@ export default {
     },
     showComfirm() {
       return new Promise((resolve, reject) => {
-        // 不写$nextTick会报错，要等到dom渲染完的下一个周期你才能取到this.$refs.alertPopBtn
+        // 不写$nextTick会报错，要等到dom渲染完的下一个周期你才能取到this.$refs
         this.$nextTick(() => {
           this.$refs.confirmBtnOk.addEventListener('click', () => {
             resolve();
