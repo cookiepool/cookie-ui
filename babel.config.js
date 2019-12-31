@@ -13,5 +13,14 @@ module.exports = {
   // 把这个写上是因为我们在使用webpack打包过后ui库过后想要直接在本地测试打包后的库，但是你如果不设置这个的话，你直接在项目的main.js
   // 里面引入就会报这个错误："export 'default' (imported as 'Cookie') was not found in '../lib/index.js'，
   // 加上这句即使不发布到npm也可以本地调用了。
-  plugins: ['@babel/plugin-transform-modules-umd']
+  plugins: ['@babel/plugin-transform-modules-umd', [
+    // 配置按需引入插件babel-plugin-component
+    "component",
+    {
+      // 库的名字为VUI
+      "libraryName": "vue-cookie-ui",
+      // 存放库文件的文件夹为lib
+      "libDir": "lib/packages",
+    }
+  ]]
 }

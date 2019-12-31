@@ -25,7 +25,7 @@ module.exports = merge(webpackLibBaseConfig, {
     path: path.resolve(__dirname, "../lib/packages"),
     // 打包后生成的js文件
     // 解释下这个[name]是怎么来的，它是根据你的entry命名来的，入口叫啥，出口的[name]就叫啥
-    filename: "[name]/[name].js",
+    filename: "[name]/index.js",
     // 我这儿目前还没有资源引用
     publicPath: "/",
     library: '[name]',
@@ -60,7 +60,7 @@ module.exports = merge(webpackLibBaseConfig, {
   plugins: [
     // 新建miniCssExtractPlugin实例并配置
     new miniCssExtractPlugin({
-      filename: '[name]/[name].css'
+      filename: '[name]/style.css'
     }),
     // 压缩css
     new optimizeCssnanoPlugin({

@@ -11,13 +11,19 @@ Vue.component('app-header', Header);
 // Vue.use(CookieUI);
 // 按需加载
 // 引入组件
-import Button from 'vue-cookie-ui/lib/packages/button/button.js';
-import 'vue-cookie-ui/lib/packages/button/button.css';
-Vue.use(Button)
-// 引入modal
-import Toast from 'vue-cookie-ui/lib/packages/toast/toast.js';
-import 'vue-cookie-ui/lib/packages/toast/toast.css';
+// import Button from 'vue-cookie-ui/lib/packages/button';
+// import 'vue-cookie-ui/lib/packages/button/style.css';
+// Vue.use(Button)
+// // 引入modal
+// import Toast from 'vue-cookie-ui/lib/packages/toast';
+// import 'vue-cookie-ui/lib/packages/toast/style.css';
+// Vue.prototype.$toast = Toast;
+// 使用babel-plugin-component
+import { Button, Toast, Dialog } from 'vue-cookie-ui';
+Vue.use(Button);
 Vue.prototype.$toast = Toast;
+Vue.prototype.$dialog = Dialog;
+
  
 new Vue({
   router,
